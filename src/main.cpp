@@ -7,6 +7,7 @@ int prID[] = {4, 5, 6}; // Assign the address of Modbus
 int numPr = sizeof(prID)/sizeof(int);
 MyModbusSensor** pressure;
 
+// Example of pressure modbus sensor value polling
 void pressurePolling(MyModbusSensor *pressure[], int prID[], int prNum)
 {
   const char* sensor = "pressure";
@@ -38,4 +39,6 @@ void loop() {
 
   /* Delete when you are done */
   // deleteMbSensor(pressure, numPr);
+
+  delay(5000);
 }
